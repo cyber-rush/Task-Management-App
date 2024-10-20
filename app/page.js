@@ -30,9 +30,14 @@ export default function Home() {
     );
   };
 
-  const sortedTasks = [...tasks].sort((a, b) => {
-    const priorityOrder = { high: 1, medium: 2, low: 3 };
-    return priorityOrder[a.priority] - priorityOrder[b.priority];
+ const sortedTasks = [...tasks].sort((a, b) => {
+    return tasks.sort((a, b) => {
+      if (a.completed !== b.completed) {
+        return a.completed ? 1 : -1; // Completed tasks at the bottom
+      }
+      const priorityOrder = { high: 1, medium: 2, low: 3 };
+      return priorityOrder[a.priority] - priorityOrder[b.priority];
+    });
   });
 
   return (
