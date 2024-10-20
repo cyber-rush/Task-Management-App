@@ -29,3 +29,6 @@ Priority Levels:
 - medium: Medium-priority tasks follow.
 - low: Low-priority tasks appear at the bottom.
 Completed Tasks: All completed tasks are sorted to appear at the bottom of the list, regardless of their priority level. This ensures that users can focus on pending tasks first.
+
+## Sorting Implementation
+The sorting function uses JavaScript’s sort method, which sorts tasks in place based on a comparison function.
